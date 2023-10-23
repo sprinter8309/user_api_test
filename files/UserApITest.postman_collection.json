@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "48b27b3f-cbc2-49e8-91c8-1be5f1adbce1",
+		"name": "UserApITest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}view",
+							"host": [
+								"{{base_url}}view"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}list",
+							"host": [
+								"{{base_url}}list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User Record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test106@yandex.ru",
+									"type": "default"
+								},
+								{
+									"key": "name",
+									"value": "Vitaliy",
+									"type": "default"
+								},
+								{
+									"key": "age",
+									"value": "35",
+									"type": "default"
+								},
+								{
+									"key": "sex",
+									"value": "m",
+									"type": "default"
+								},
+								{
+									"key": "birthday",
+									"value": "1988-03-12",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "89003054040",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}add",
+							"host": [
+								"{{base_url}}add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Record",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "7",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "name",
+									"value": "Leonid",
+									"type": "default"
+								},
+								{
+									"key": "age",
+									"value": "42",
+									"type": "default"
+								},
+								{
+									"key": "sex",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "birthday",
+									"value": "",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "89993006053",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}update",
+							"host": [
+								"{{base_url}}update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Record",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}2",
+							"host": [
+								"{{base_url}}2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://user-api.loc/api/v1/user/",
+			"type": "default"
+		}
+	]
+}
